@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <img src="background.jpg" alt="background">
+    <header>
+        <h1>Lights</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Team</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="toggle"></div>
+    </header>
+
+    <section class="sec-1 current">
+        <div class="lamp">
+            <div class="box">
+                <img src="lamp.jpg" id="image" alt="">
+            </div>
+        </div>
+        <div class="lamp">
+            <div class="txt">
+                <h2 id="title">lamp</h2>
+                <p id="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta aspernatur mollitia voluptates beatae ratione dicta quam aut nam eveniet suscipit eum eligendi cupiditate, itaque consectetur!</p>
+                <h4 id="count">01/<span>05</span></h4>
+            </div>
+        </div>
+    </section>
+
+    <section class="sec-2">
+        <div class="lamp">
+            <div class="box">
+                <img src="lamp2.jpg" id="image" alt="">
+            </div>
+        </div>
+        <div class="lamp">
+            <div class="txt">
+                <h2 id="title">lamp2</h2>
+                <p id="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta aspernatur mollitia voluptates beatae ratione dicta quam aut nam eveniet suscipit eum eligendi cupiditate, itaque consectetur! Lorem ipsum dolor sit amet consectetur adipisicing
+                    elit. Obcaecati quasi adipisci doloribus fugit. Id sed illo rerum labore a nulla, fuga quasi illum laborum ducimus deserunt porro placeat, voluptatum eos commodi repellat!</p>
+                <h4 id="count">02/<span>05</span></h4>
+            </div>
+        </div>
+    </section>
+
+    <section class="sec-3">
+        <div class="lamp">
+            <div class="box">
+                <img src="bulb.jpg" id="image" alt="">
+            </div>
+        </div>
+        <div class="lamp">
+            <div class="txt">
+                <h2 id="title">Bulb</h2>
+                <p id="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta aspernatur mollitia voluptates beatae ratione dicta quam aut nam eveniet suscipit eum eligendi cupiditate, itaque consectetur! Lorem ipsum dolor sit amet consectetur adipisicing
+                    elit. Facilis sapiente magnam recusandae itaque blanditiis at deserunt laudantium excepturi consequuntur quibusdam aperiam sint distinctio illo deleniti tempore, ipsam sunt debitis aut enim necessitatibus vitae. Quae obcaecati libero
+                    tempore, odit recusandae numquam!
+                </p>
+                <h4 id="count">03/<span>05</span></h4>
+            </div>
+        </div>
+    </section>
+
+    <section class="sec-4">
+        <div class="lamp">
+            <div class="box">
+                <img src="bulb2.jpg" id="image" alt="">
+            </div>
+        </div>
+        <div class="lamp">
+            <div class="txt">
+                <h2 id="title">Bulbs</h2>
+                <p id="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta aspernatur mollitia voluptates beatae ratione dicta quam aut nam eveniet suscipit eum eligendi cupiditate, itaque consectetur! Lorem ipsum dolor, sit amet consectetur adipisicing
+                    elit. Similique, pariatur.</p>
+                <h4 id="count">04/<span>05</span></h4>
+            </div>
+        </div>
+    </section>
+
+    <section class="sec-5">
+        <div class="lamp">
+            <div class="box">
+                <img src="bulb3.jpg" id="image" alt="">
+            </div>
+        </div>
+        <div class="lamp">
+            <div class="txt">
+                <h2 id="title">Bulbs</h2>
+                <p id="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta aspernatur mollitia voluptates beatae ratione dicta quam aut nam eveniet suscipit eum eligendi cupiditate, itaque consectetur! Lorem ipsum dolor sit amet consectetur adipisicing
+                    elit. Qui, in, esse consequatur nostrum ipsa eaque autem illo expedita ea delectus soluta officia velit quibusdam.
+                </p>
+                <h4 id="count">05/<span>05</span></h4>
+            </div>
+        </div>
+    </section>
+
+    <div class="change">
+        <a href="#"><i class="fa fa-chevron-left left" aria-hidden="true"></i></a>
+        <a href="#"><i class="fa fa-chevron-right right" aria-hidden="true"></i></a>
+    </div>
+
+    <footer>
+        <div class="icon">
+            <div class="social-icons">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+                <br>
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+                <br>
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        let toggle = document.querySelector('.toggle');
+        toggle.addEventListener('click', function() {
+            toggle.classList.toggle('active');
+        })
+    </script>
+</body>
+
+</html>
