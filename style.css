@@ -9,19 +9,18 @@ img {
     width: 100%;
     min-height: 100vh;
     opacity: 0.9;
-    z-index: -2;
+    z-index: -3;
 }
 
 header {
     position: fixed;
-    z-index: 10;
     top: 0;
-    padding: 20px 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     overflow: hidden;
+    padding: 10px 50px;
 }
 
 header h1 {
@@ -56,6 +55,7 @@ header nav ul li a {
     align-items: center;
     cursor: pointer;
     transition: .5s;
+    z-index: 40;
 }
 
 .toggle::after {
@@ -67,6 +67,7 @@ header nav ul li a {
     transform: translateY(-6px);
     box-shadow: -5px 6px #f1efdf;
     transition: .5s;
+    z-index: 40;
 }
 
 .toggle::before {
@@ -79,6 +80,7 @@ header nav ul li a {
     right: 65px;
     box-shadow: none;
     transition: .5s;
+    z-index: 40;
 }
 
 .toggle:hover::after {
@@ -106,6 +108,7 @@ section {
     padding: 60px;
     width: 100%;
     opacity: 0;
+    z-index: 0;
 }
 
 section .lamp {
@@ -182,15 +185,141 @@ footer .social-icons i {
 
 .change {
     position: absolute;
-    bottom: 0;
+    top: 50%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    min-height: 100vh;
     padding: 0 30px;
+    transform: translateY(-50%);
 }
 
 .change i {
-    color: rgba(0, 0, 0, 0.9);
+    color: #f1efdf;
+}
+
+
+/* make it responsive */
+
+@media (max-width:640px) {
+    header {
+        height: 100%;
+        z-index: 11;
+    }
+    header h1 {
+        position: absolute;
+        top: 10px;
+        z-index: 41;
+        left: 20px;
+    }
+    header .toggle {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        z-index: 40;
+    }
+    nav {
+        width: 0px;
+        position: absolute;
+        left: 0;
+        background: rgba(0, 0, 0, 0.3);
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: .5s;
+        overflow: hidden;
+    }
+    nav.show {
+        width: 200px;
+        transition: .5s;
+    }
+    nav ul {
+        display: flex;
+        flex-direction: column;
+    }
+    nav ul li {
+        line-height: 80px;
+    }
+    header nav ul li a {
+        font-size: 20px;
+    }
+    .social-icons {
+        display: none;
+    }
+    .toggle::before {
+        right: 20px;
+    }
+    .toggle.active::after {
+        position: absolute;
+        content: '';
+        width: 20px;
+        height: 1px;
+        background: #f1efdf;
+        transform: rotate(45deg);
+        box-shadow: none;
+        transition: .5s;
+    }
+    .toggle.active::before {
+        position: absolute;
+        content: '';
+        width: 20px;
+        height: 1px;
+        background: #f1efdf;
+        transform: rotate(-45deg);
+        right: 10px;
+        transition: .5s;
+    }
+    section {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        padding: 80px 20px;
+        height: 1000px;
+        z-index: 8;
+    }
+    section .lamp {
+        width: 100%;
+        height: 100%;
+    }
+    section .box {
+        width: 300px;
+        height: 100%;
+    }
+    section .box img {
+        height: 100%;
+        opacity: .2;
+    }
+    section .txt {
+        position: absolute;
+        top: 40px;
+    }
+    section .txt h2 {
+        position: absolute;
+        transform: translateX(50%);
+        color: #f1efdf;
+    }
+    section .txt .para {
+        width: 200px;
+        height: 300px;
+        overflow: hidden;
+    }
+    section .txt p {
+        position: relative;
+        top: 70px;
+        height: 100%;
+        overflow-y: scroll;
+    }
+    section .txt h4 {
+        position: relative;
+        top: 40px;
+    }
+    .change {
+        position: absolute;
+        z-index: 20;
+    }
+    section.dull {
+        z-index: 10;
+        opacity: 0.5;
+    }
 }
