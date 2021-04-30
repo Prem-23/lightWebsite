@@ -244,9 +244,6 @@ footer .social-icons i {
     header nav ul li a {
         font-size: 20px;
     }
-    .social-icons {
-        display: none;
-    }
     .toggle::before {
         right: 20px;
     }
@@ -316,9 +313,36 @@ footer .social-icons i {
     .change {
         position: absolute;
         z-index: 20;
+        transition: .5s;
     }
-    section.dull {
-        z-index: 10;
-        opacity: 0.5;
+    .change .left.dull {
+        display: none;
+        transition: .5s;
+    }
+    footer {
+        width: 60%;
+    }
+    .icon {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        z-index: 50;
+        width: 0;
+        height: 200px;
+        transition: .5s;
+    }
+    .icon .social-icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        padding: 0 20px;
+    }
+    .icon .social-icons i {
+        padding: 0 20px;
+    }
+    .icon.social {
+        width: 200px;
+        transition: .5s;
     }
 }
