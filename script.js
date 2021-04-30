@@ -12,6 +12,8 @@ let sec5 = document.querySelector('.sec-5');
 
 
 right.onclick = function() {
+    toggle.classList.remove('active');
+    navBar.classList.remove('show');
     if (sec1.className == 'sec-1 current') {
         sec1.classList.remove('current');
         sec2.classList.add('current');
