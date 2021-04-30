@@ -14,12 +14,12 @@
     <img src="background.jpg" alt="background">
     <header>
         <h1>Lights</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Team</a></li>
-                <li><a href="#">Contact</a></li>
+        <nav class="nav">
+            <ul class="ul">
+                <li><a class="home" href="#">Home</a></li>
+                <li><a class="home" href="#">Services</a></li>
+                <li><a class="home" href="#">Team</a></li>
+                <li><a class="home" href="#">Contact</a></li>
             </ul>
         </nav>
         <div class="toggle"></div>
@@ -34,7 +34,9 @@
         <div class="lamp">
             <div class="txt">
                 <h2 id="title">lamp</h2>
-                <p id="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta aspernatur mollitia voluptates beatae ratione dicta quam aut nam eveniet suscipit eum eligendi cupiditate, itaque consectetur!</p>
+                <div class="para">
+                    <p id="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta aspernatur mollitia voluptates beatae ratione dicta quam aut nam eveniet suscipit eum eligendi cupiditate, itaque consectetur!</p>
+                </div>
                 <h4 id="count">01/<span>05</span></h4>
             </div>
         </div>
@@ -49,8 +51,10 @@
         <div class="lamp">
             <div class="txt">
                 <h2 id="title">lamp2</h2>
-                <p id="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta aspernatur mollitia voluptates beatae ratione dicta quam aut nam eveniet suscipit eum eligendi cupiditate, itaque consectetur! Lorem ipsum dolor sit amet consectetur adipisicing
-                    elit. Obcaecati quasi adipisci doloribus fugit. Id sed illo rerum labore a nulla, fuga quasi illum laborum ducimus deserunt porro placeat, voluptatum eos commodi repellat!</p>
+                <div class="para">
+                    <p id="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta aspernatur mollitia voluptates beatae ratione dicta quam aut nam eveniet suscipit eum eligendi cupiditate, itaque consectetur! Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Obcaecati quasi adipisci doloribus fugit. Id sed illo rerum labore a nulla, fuga quasi illum laborum ducimus deserunt porro placeat, voluptatum eos commodi repellat!</p>
+                </div>
                 <h4 id="count">02/<span>05</span></h4>
             </div>
         </div>
@@ -65,10 +69,12 @@
         <div class="lamp">
             <div class="txt">
                 <h2 id="title">Bulb</h2>
-                <p id="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta aspernatur mollitia voluptates beatae ratione dicta quam aut nam eveniet suscipit eum eligendi cupiditate, itaque consectetur! Lorem ipsum dolor sit amet consectetur adipisicing
-                    elit. Facilis sapiente magnam recusandae itaque blanditiis at deserunt laudantium excepturi consequuntur quibusdam aperiam sint distinctio illo deleniti tempore, ipsam sunt debitis aut enim necessitatibus vitae. Quae obcaecati libero
-                    tempore, odit recusandae numquam!
-                </p>
+                <div class="para">
+                    <p id="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta aspernatur mollitia voluptates beatae ratione dicta quam aut nam eveniet suscipit eum eligendi cupiditate, itaque consectetur! Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Facilis sapiente magnam recusandae itaque blanditiis at deserunt laudantium excepturi consequuntur quibusdam aperiam sint distinctio illo deleniti tempore, ipsam sunt debitis aut enim necessitatibus vitae. Quae obcaecati
+                        libero tempore, odit recusandae numquam!
+                    </p>
+                </div>
                 <h4 id="count">03/<span>05</span></h4>
             </div>
         </div>
@@ -83,8 +89,10 @@
         <div class="lamp">
             <div class="txt">
                 <h2 id="title">Bulbs</h2>
-                <p id="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta aspernatur mollitia voluptates beatae ratione dicta quam aut nam eveniet suscipit eum eligendi cupiditate, itaque consectetur! Lorem ipsum dolor, sit amet consectetur adipisicing
-                    elit. Similique, pariatur.</p>
+                <div class="para">
+                    <p id="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta aspernatur mollitia voluptates beatae ratione dicta quam aut nam eveniet suscipit eum eligendi cupiditate, itaque consectetur! Lorem ipsum dolor, sit amet consectetur
+                        adipisicing elit. Similique, pariatur.</p>
+                </div>
                 <h4 id="count">04/<span>05</span></h4>
             </div>
         </div>
@@ -99,9 +107,11 @@
         <div class="lamp">
             <div class="txt">
                 <h2 id="title">Bulbs</h2>
-                <p id="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta aspernatur mollitia voluptates beatae ratione dicta quam aut nam eveniet suscipit eum eligendi cupiditate, itaque consectetur! Lorem ipsum dolor sit amet consectetur adipisicing
-                    elit. Qui, in, esse consequatur nostrum ipsa eaque autem illo expedita ea delectus soluta officia velit quibusdam.
-                </p>
+                <div class="para">
+                    <p id="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta aspernatur mollitia voluptates beatae ratione dicta quam aut nam eveniet suscipit eum eligendi cupiditate, itaque consectetur! Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Qui, in, esse consequatur nostrum ipsa eaque autem illo expedita ea delectus soluta officia velit quibusdam.
+                    </p>
+                </div>
                 <h4 id="count">05/<span>05</span></h4>
             </div>
         </div>
@@ -127,9 +137,26 @@
     <script src="script.js"></script>
     <script>
         let toggle = document.querySelector('.toggle');
+        let navBar = document.querySelector('.nav');
+        let head = document.querySelector('header h1');
         toggle.addEventListener('click', function() {
             toggle.classList.toggle('active');
+            navBar.classList.toggle('show');
         })
+
+        let list = document.querySelectorAll('ul li a');
+
+        list.forEach(item => {
+            item.addEventListener('click', function() {
+                toggle.classList.remove('active');
+                navBar.classList.remove('show');
+            })
+        })
+
+        head.onclick = function() {
+            toggle.classList.remove('active');
+            navBar.classList.remove('show');
+        }
     </script>
 </body>
 
