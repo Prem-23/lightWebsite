@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Light'sSite</title>
 </head>
 
 <body>
@@ -53,7 +53,8 @@
                 <h2 id="title">lamp2</h2>
                 <div class="para">
                     <p id="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta aspernatur mollitia voluptates beatae ratione dicta quam aut nam eveniet suscipit eum eligendi cupiditate, itaque consectetur! Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit. Obcaecati quasi adipisci doloribus fugit. Id sed illo rerum labore a nulla, fuga quasi illum laborum ducimus deserunt porro placeat, voluptatum eos commodi repellat!</p>
+                        elit.
+                    </p>
                 </div>
                 <h4 id="count">02/<span>05</span></h4>
             </div>
@@ -71,8 +72,7 @@
                 <h2 id="title">Bulb</h2>
                 <div class="para">
                     <p id="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta aspernatur mollitia voluptates beatae ratione dicta quam aut nam eveniet suscipit eum eligendi cupiditate, itaque consectetur! Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit. Facilis sapiente magnam recusandae itaque blanditiis at deserunt laudantium excepturi consequuntur quibusdam aperiam sint distinctio illo deleniti tempore, ipsam sunt debitis aut enim necessitatibus vitae. Quae obcaecati
-                        libero tempore, odit recusandae numquam!
+                        elit.
                     </p>
                 </div>
                 <h4 id="count">03/<span>05</span></h4>
@@ -108,8 +108,7 @@
             <div class="txt">
                 <h2 id="title">Bulbs</h2>
                 <div class="para">
-                    <p id="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta aspernatur mollitia voluptates beatae ratione dicta quam aut nam eveniet suscipit eum eligendi cupiditate, itaque consectetur! Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit. Qui, in, esse consequatur nostrum ipsa eaque autem illo expedita ea delectus soluta officia velit quibusdam.
+                    <p id="text">. Soluta aspernatur mollitia voluptates beatae ratione dicta quam aut nam eveniet suscipit eum eligendi cupiditate, itaque consectetur! Lorem ipsum dolor sit amet consectetur adipisicing elit
                     </p>
                 </div>
                 <h4 id="count">05/<span>05</span></h4>
@@ -118,7 +117,7 @@
     </section>
 
     <div class="change">
-        <a href="#"><i class="fa fa-chevron-left left" aria-hidden="true"></i></a>
+        <a href="#"><i id="chevron" class="fa fa-chevron-left left" aria-hidden="true"></i></a>
         <a href="#"><i class="fa fa-chevron-right right" aria-hidden="true"></i></a>
     </div>
 
@@ -139,9 +138,14 @@
         let toggle = document.querySelector('.toggle');
         let navBar = document.querySelector('.nav');
         let head = document.querySelector('header h1');
+        let social = document.querySelector('.icon');
+        let dull = document.querySelector('#chevron');
+
         toggle.addEventListener('click', function() {
             toggle.classList.toggle('active');
             navBar.classList.toggle('show');
+            social.classList.toggle('social');
+            dull.classList.toggle('dull');
         })
 
         let list = document.querySelectorAll('ul li a');
@@ -150,12 +154,14 @@
             item.addEventListener('click', function() {
                 toggle.classList.remove('active');
                 navBar.classList.remove('show');
+                social.classList.remove('social');
             })
         })
 
         head.onclick = function() {
             toggle.classList.remove('active');
             navBar.classList.remove('show');
+            social.classList.remove('social');
         }
     </script>
 </body>
